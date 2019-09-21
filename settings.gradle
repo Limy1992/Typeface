@@ -1,0 +1,2 @@
+include ':app', ':library_typeface'
+rootProject.name='Typeface'
