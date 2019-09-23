@@ -55,16 +55,16 @@ public class SiYuanFontTextView extends TextView {
                 setTypeface(getTypefaceR("fonts/NotoSansHans-Regular.otf"));
                 break;
             case AIR_MEDIUM:
-                setTypeface(getTypefaceAM("AvenirLTStd-Medium.otf"));
+                setTypeface(getTypefaceAM("fonts/AvenirLTStd-Medium.otf"));
                 break;
             case AIR_BOOK:
-                setTypeface(getTypefaceAB("AvenirLTStd-Book.otf"));
+                setTypeface(getTypefaceAB("fonts/AvenirLTStd-Book.otf"));
                 break;
             case SNA_MEDIUM:
-                setTypeface(getTypefaceSM("NotoSansHans-Medium.otf"));
+                setTypeface(getTypefaceSM("fonts/NotoSansHans-Medium.otf"));
                 break;
             case SNA_NORMAL:
-                setTypeface(getTypefaceSN("SourceHanSansCN-Normal-2.otf"));
+                setTypeface(getTypefaceSN("fonts/SourceHanSansCN-Normal-2.otf"));
                 break;
         }
         typedArray.recycle();
