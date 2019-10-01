@@ -39,14 +39,14 @@ public class SiYuanFontManger {
 
     Typeface getTypefaceAM() {
         if (airMediumTypeface == null) {
-            airMediumTypeface = Typeface.createFromAsset(mContext.getAssets(), "fonts/AvenirLTStd-Medium.otf");
+            airMediumTypeface = Typeface.createFromAsset(mContext.getAssets(), "fonts/Avenir-Medium.otf");
         }
         return airMediumTypeface;
     }
 
     Typeface getTypefaceAB() {
         if (airBookTypeface == null) {
-            airBookTypeface = Typeface.createFromAsset(mContext.getAssets(), "fonts/AvenirLTStd-Book.otf");
+            airBookTypeface = Typeface.createFromAsset(mContext.getAssets(), "fonts/Avenir-Book.otf");
         }
         return airBookTypeface;
     }

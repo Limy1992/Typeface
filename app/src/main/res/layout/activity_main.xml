@@ -15,6 +15,46 @@
         android:textColor="#000000"
         android:padding="10dp"
        />
+
+
+
+    <com.lmy.library.typeface.SiYuanFontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:background="@color/colorAccent"
+        app:fontTypeface="bookAir"
+        android:includeFontPadding="false"
+        android:textColor="#000000"
+       />
+
+    <com.lmy.library.typeface.SiYuanFontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:background="@color/colorAccent"
+        android:text="00"
+        app:fontTypeface="mediumAir"
+        android:textColor="#000000"
+       />
+
+    <com.lmy.library.typeface.SiYuanFontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:text="哈哈"
+        app:fontTypeface="normalSan"
+        android:textColor="#000000"
+       />
+
+    <com.lmy.library.typeface.SiYuanFontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:text="哈哈"
+        app:fontTypeface="mediumSan"
+        android:textColor="#000000"
+       />
     <TextView
         android:text="Hello World RegularSan!默认字体"
         android:padding="10dp"
