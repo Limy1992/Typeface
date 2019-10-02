@@ -17,11 +17,13 @@
 
     <!-- Custom Class Styles -->
 
-    <style name="TextViewStyle">
+    <style name="TextViewStyle" parent="android:Widget.Holo.Light.TextView">
         <item name="android:includeFontPadding">false</item>
     </style>
 
     <style name="TextFieldRegular" parent="TextViewStyle">
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
         <item name="fontPath">fonts/NotoSansHans-Regular.otf</item>
     </style>
 
@@ -35,10 +37,14 @@
 
     <style name="TextFieldMedium" parent="TextViewStyle">
         <item name="fontPath">fonts/NotoSansHans-Medium.otf</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
     </style>
 
     <style name="TextFieldNormal" parent="TextViewStyle">
         <item name="fontPath">fonts/SourceHanSansCN-Normal-2.otf</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
     </style>
 
 </resources>

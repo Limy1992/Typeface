@@ -55,6 +55,7 @@
         android:textColor="#000000" />
 
     <TextView
+        android:includeFontPadding="false"
         style="@style/TextFieldRegular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -70,13 +71,13 @@
 <!--        android:text="Hello World RegularSan! Style 思源字体"-->
 <!--        android:textColor="#000000" />-->
 
-    <com.lmy.library.typeface.SiYuanFontTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="Hello World RegularSan! 思源字体"
-        android:textColor="#000000"
-        app:fontTypeface="regularSan" />
+<!--    <com.lmy.library.typeface.SiYuanFontTextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:padding="10dp"-->
+<!--        android:text="Hello World RegularSan! 思源字体"-->
+<!--        android:textColor="#000000"-->
+<!--        app:fontTypeface="regularSan" />-->
 
 
 </LinearLayout>
