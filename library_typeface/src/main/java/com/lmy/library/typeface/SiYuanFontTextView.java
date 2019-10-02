@@ -47,7 +47,7 @@ public class SiYuanFontTextView extends TextView {
     private void initTypeView(AttributeSet attrs) {
         setIncludeFontPadding(false);
         TypedArray typedArray = mContext.obtainStyledAttributes(attrs, R.styleable.SiYuanFontTextView);
-        int textType = typedArray.getInt(R.styleable.SiYuanFontTextView_fontTypeface,SiYuanFontManger.SNA_MEDIUM);
+        int textType = typedArray.getInt(R.styleable.SiYuanFontTextView_fontTypeface,0);
         switch (textType) {
             case SiYuanFontManger.REGULAR:
                 setTypeface(siYuanFontManger.getTypefaceR());

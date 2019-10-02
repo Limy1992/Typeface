@@ -1,17 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<!--      private static final String REGULAR = "sanRegular";
-    private static final String AIR_MEDIUM = "airMedium";
-    private static final String AIR_BOOK = "airBook";
-    private static final String SNA_MEDIUM = "sanMedium";
-    private static final String SNA_NORMAL = "sanNormal";-->
+    <!--      private static final String REGULAR = "sanRegular";
+        private static final String AIR_MEDIUM = "airMedium";
+        private static final String AIR_BOOK = "airBook";
+        private static final String SNA_MEDIUM = "sanMedium";
+        private static final String SNA_NORMAL = "sanNormal";-->
     <declare-styleable name="SiYuanFontTextView">
         <attr name="fontTypeface" format="enum">
-            <enum name="regularSan" value="1"/>
-            <enum name="mediumAir" value="2"/>
-            <enum name="bookAir" value="3"/>
-            <enum name="mediumSan" value="4"/>
-            <enum name="normalSan" value="5"/>
+            <enum name="regularSan" value="1" />
+            <enum name="mediumAir" value="2" />
+            <enum name="bookAir" value="3" />
+            <enum name="mediumSan" value="4" />
+            <enum name="normalSan" value="5" />
         </attr>
     </declare-styleable>
+
+    <!-- Custom Class Styles -->
+    <style name="TextFieldRegular">
+        <item name="fontPath">fonts/NotoSansHans-Regular.otf</item>
+    </style>
+
+    <style name="TextFieldAirBook">
+        <item name="fontPath">fonts/Avenir-Book.otf</item>
+    </style>
+
+    <style name="TextFieldAirMedium">
+        <item name="fontPath">fonts/Avenir-Medium.otf</item>
+    </style>
+
+    <style name="TextFieldMedium">
+        <item name="fontPath">fonts/NotoSansHans-Medium.otf</item>
+    </style>
+
+    <style name="TextFieldNormal">
+        <item name="fontPath">fonts/SourceHanSansCN-Normal-2.otf</item>
+    </style>
+
 </resources>
