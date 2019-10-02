@@ -16,23 +16,28 @@
     </declare-styleable>
 
     <!-- Custom Class Styles -->
-    <style name="TextFieldRegular">
+
+    <style name="TextViewStyle">
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="TextFieldRegular" parent="TextViewStyle">
         <item name="fontPath">fonts/NotoSansHans-Regular.otf</item>
     </style>
 
-    <style name="TextFieldAirBook">
+    <style name="TextFieldAirBook" parent="TextViewStyle">
         <item name="fontPath">fonts/Avenir-Book.otf</item>
     </style>
 
-    <style name="TextFieldAirMedium">
+    <style name="TextFieldAirMedium" parent="TextViewStyle">
         <item name="fontPath">fonts/Avenir-Medium.otf</item>
     </style>
 
-    <style name="TextFieldMedium">
+    <style name="TextFieldMedium" parent="TextViewStyle">
         <item name="fontPath">fonts/NotoSansHans-Medium.otf</item>
     </style>
 
-    <style name="TextFieldNormal">
+    <style name="TextFieldNormal" parent="TextViewStyle">
         <item name="fontPath">fonts/SourceHanSansCN-Normal-2.otf</item>
     </style>
 
