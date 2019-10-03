@@ -8,6 +8,8 @@
 
 
     <TextView
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
         android:includeFontPadding="false"
         android:textColor="#ffffff"
         android:background="@color/colorAccent"
@@ -65,9 +67,11 @@
     <TextView
         android:textColor="#ffffff"
         android:background="@color/colorAccent"
-        style="@style/TextFieldAirBook"
+        style="@style/TextFieldNormal"
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
+        android:paddingTop="0.8dp"
+        android:paddingBottom="0.8dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
