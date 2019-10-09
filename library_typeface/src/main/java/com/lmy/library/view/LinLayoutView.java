@@ -53,7 +53,6 @@ public class LinLayoutView extends LinearLayout {
         linTextView = typedArray.getString(R.styleable.LinLayoutView_linTextView);
         textColor = typedArray.getColor(R.styleable.LinLayoutView_linTextColor, Color.parseColor("#26292D"));
         setBackgroundResource(linBackground);
-//        setElevation(dip2px(1f));
         initAddChildView();
         typedArray.recycle();
     }
@@ -95,5 +94,4 @@ public class LinLayoutView extends LinearLayout {
         float scale = getResources().getDisplayMetrics().density;
         return (int) (dpValue * scale + 0.5F);
     }
-
 }
