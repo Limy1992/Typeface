@@ -31,6 +31,7 @@ public class LinLayoutView extends LinearLayout {
     private int iconSrc;
     private int linBackground;
     private String linTextView;
+    private int textColor;
 
     public LinLayoutView(Context context) {
         this(context, null);
@@ -44,14 +45,14 @@ public class LinLayoutView extends LinearLayout {
         super(context, attrs, defStyleAttr);
         mContext = context;
 
-        TypedArray typedArray = mContext.obtainStyledAttributes(attrs, R.styleable.CentLinLayoutStyle);
-        iconWidth = typedArray.getDimension(R.styleable.CentLinLayoutStyle_icon_width, 13f);
-        iconHeight = typedArray.getDimension(R.styleable.CentLinLayoutStyle_icon_height, 13f);
-        textViewSize = typedArray.getDimension(R.styleable.CentLinLayoutStyle_text_size, 8);
-        iconSrc = typedArray.getResourceId(R.styleable.CentLinLayoutStyle_icon_scr, R.drawable.ic_m_sing_en);
-        linBackground = typedArray.getResourceId(R.styleable.CentLinLayoutStyle_linBackground, R.drawable.bg_m_button5);
-        linTextView = typedArray.getString(R.styleable.CentLinLayoutStyle_linTextView);
-
+        TypedArray typedArray = mContext.obtainStyledAttributes(attrs, R.styleable.LinLayoutView);
+        iconWidth = typedArray.getDimension(R.styleable.LinLayoutView_icon_width, 13f);
+        iconHeight = typedArray.getDimension(R.styleable.LinLayoutView_icon_height, 13f);
+        textViewSize = typedArray.getDimension(R.styleable.LinLayoutView_text_size, 8);
+        iconSrc = typedArray.getResourceId(R.styleable.LinLayoutView_icon_scr, R.drawable.ic_m_sing_en);
+        linBackground = typedArray.getResourceId(R.styleable.LinLayoutView_linBackground, R.drawable.bg_m_button5);
+        linTextView = typedArray.getString(R.styleable.LinLayoutView_linTextView);
+        textColor = typedArray.getColor(R.styleable.LinLayoutView_text_color, Color.parseColor("#26292D"));
         setBackgroundResource(linBackground);
 //        setElevation(dip2px(1f));
         initAddChildView();
@@ -77,7 +78,7 @@ public class LinLayoutView extends LinearLayout {
         textView.setTextAppearance(mContext, R.style.TextFieldRegular);
         textView.setText(linTextView);
         textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textViewSize);
-        textView.setTextColor(Color.parseColor("#26292D"));
+        textView.setTextColor(textColor);
         addView(textView, textParams);
 
         LayoutParams moreParams = new  LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);

@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--      private static final String REGULAR = "sanRegular";
-        private static final String AIR_MEDIUM = "airMedium";
-        private static final String AIR_BOOK = "airBook";
-        private static final String SNA_MEDIUM = "sanMedium";
-        private static final String SNA_NORMAL = "sanNormal";-->
-    <declare-styleable name="SiYuanFontTextView">
-        <attr name="fontTypeface" format="enum">
-            <enum name="regularSan" value="1" />
-            <enum name="mediumAir" value="2" />
-            <enum name="bookAir" value="3" />
-            <enum name="mediumSan" value="4" />
-            <enum name="normalSan" value="5" />
-        </attr>
-    </declare-styleable>
 
     <!-- Custom Class Styles -->
     <style name="TextViewStyle" parent="android:Widget.Holo.Light.TextView">
@@ -52,16 +38,6 @@
         <item name="android:paddingTop">1dp</item>
         <item name="fontPath">fonts/NotoSansHans-Regular.otf</item>
     </style>
-
-    <!-- lin -->
-    <declare-styleable name="CentLinLayoutStyle">
-        <attr name="icon_width" format="dimension" />
-        <attr name="icon_height" format="dimension" />
-        <attr name="icon_scr" format="integer" />
-        <attr name="text_size" format="dimension" />
-        <attr name="linBackground" format="integer"/>
-        <attr name="linTextView" format="string"/>
-    </declare-styleable>
 
 
 </resources>
