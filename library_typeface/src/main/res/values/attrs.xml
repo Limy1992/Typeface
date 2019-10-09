@@ -21,13 +21,13 @@
 
     <!-- lin -->
     <declare-styleable name="LinLayoutView">
-        <attr name="icon_width" format="dimension" />
-        <attr name="icon_height" format="dimension" />
-        <attr name="icon_scr" format="reference" />
-        <attr name="text_size" format="dimension" />
+        <attr name="linIconWidth" format="dimension" />
+        <attr name="linIconHeight" format="dimension" />
+        <attr name="linIconScr" format="reference" />
+        <attr name="linTextSize" format="dimension" />
         <attr name="linBackground" format="reference|color"/>
         <attr name="linTextView" format="string"/>
-        <attr name="text_color" format="color"/>
+        <attr name="linTextColor" format="color"/>
     </declare-styleable>
 
 </resources>

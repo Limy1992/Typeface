@@ -45,13 +45,13 @@ public class LinLayoutView extends LinearLayout {
         mContext = context;
 
         TypedArray typedArray = mContext.obtainStyledAttributes(attrs, R.styleable.LinLayoutView);
-        iconWidth = typedArray.getDimension(R.styleable.LinLayoutView_icon_width, 13f);
-        iconHeight = typedArray.getDimension(R.styleable.LinLayoutView_icon_height, 13f);
-        textViewSize = typedArray.getDimension(R.styleable.LinLayoutView_text_size, 8);
-        iconSrc = typedArray.getResourceId(R.styleable.LinLayoutView_icon_scr, R.drawable.ic_m_sing_en);
+        iconWidth = typedArray.getDimension(R.styleable.LinLayoutView_linIconWidth, 13f);
+        iconHeight = typedArray.getDimension(R.styleable.LinLayoutView_linIconHeight, 13f);
+        textViewSize = typedArray.getDimension(R.styleable.LinLayoutView_linTextSize, 8);
+        iconSrc = typedArray.getResourceId(R.styleable.LinLayoutView_linIconScr, R.drawable.ic_m_sing_en);
         linBackground = typedArray.getResourceId(R.styleable.LinLayoutView_linBackground, R.drawable.bg_m_button5);
         linTextView = typedArray.getString(R.styleable.LinLayoutView_linTextView);
-        textColor = typedArray.getColor(R.styleable.LinLayoutView_text_color, Color.parseColor("#26292D"));
+        textColor = typedArray.getColor(R.styleable.LinLayoutView_linTextColor, Color.parseColor("#26292D"));
         setBackgroundResource(linBackground);
 //        setElevation(dip2px(1f));
         initAddChildView();

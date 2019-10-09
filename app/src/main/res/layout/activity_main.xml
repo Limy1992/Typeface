@@ -85,6 +85,6 @@
         app:linTextView="@string/app_name"
         app:linBackground="@drawable/bg_m_button5"
         android:layout_height="50dp"
-        app:text_color="@color/colorPrimary"
+        app:linTextColor="@color/colorPrimary"
         />
 </LinearLayout>
