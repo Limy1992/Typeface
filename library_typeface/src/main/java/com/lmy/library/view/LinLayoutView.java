@@ -1,6 +1,7 @@
 package com.lmy.library.view;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.util.AttributeSet;
@@ -24,8 +25,8 @@ public class LinLayoutView extends LinearLayout {
     private Context mContext;
     public ImageView imageView;
     public TextView textView;
-    private float iconWidth;
-    private float iconHeight;
+    private int iconWidth;
+    private int iconHeight;
     private float textViewSize;
     private int iconSrc;
     private int linBackground;
@@ -45,9 +46,9 @@ public class LinLayoutView extends LinearLayout {
         mContext = context;
 
         TypedArray typedArray = mContext.obtainStyledAttributes(attrs, R.styleable.LinLayoutView);
-        iconWidth = typedArray.getDimension(R.styleable.LinLayoutView_linIconWidth, 13f);
-        iconHeight = typedArray.getDimension(R.styleable.LinLayoutView_linIconHeight, 13f);
-        textViewSize = typedArray.getDimension(R.styleable.LinLayoutView_linTextSize, 8);
+        iconWidth = typedArray.getInt(R.styleable.LinLayoutView_linIconWidth, dip2px(13));
+        iconHeight = typedArray.getInt(R.styleable.LinLayoutView_linIconHeight, dip2px(13));
+        textViewSize = typedArray.getDimension(R.styleable.LinLayoutView_linTextSize, 0);
         iconSrc = typedArray.getResourceId(R.styleable.LinLayoutView_linIconScr, R.drawable.ic_m_sing_en);
         linBackground = typedArray.getResourceId(R.styleable.LinLayoutView_linBackground, R.drawable.bg_m_button5);
         linTextView = typedArray.getString(R.styleable.LinLayoutView_linTextView);
@@ -58,28 +59,32 @@ public class LinLayoutView extends LinearLayout {
     }
 
     private void initAddChildView() {
-        LayoutParams params = new LayoutParams(dip2px(iconWidth), dip2px(iconHeight));
+        LayoutParams params = new LayoutParams(iconWidth, iconHeight);
         params.setMargins(dip2px(9f)
-                ,dip2px(7f)
-                ,0
-                ,dip2px(7f));
+                , dip2px(7f)
+                , 0
+                , dip2px(7f));
         params.gravity = Gravity.CENTER_VERTICAL;
         imageView = new ImageView(mContext);
         imageView.setImageResource(iconSrc);
         addView(imageView, params);
 
-        LayoutParams textParams = new  LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        LayoutParams textParams = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         textParams.leftMargin = dip2px(7f);
         textParams.weight = 1;
         textParams.gravity = Gravity.CENTER_VERTICAL;
         textView = new TextView(mContext);
         textView.setTextAppearance(mContext, R.style.TextFieldRegular);
         textView.setText(linTextView);
-        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textViewSize);
+        if (textViewSize > 0) {
+            textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, textViewSize);
+        } else {
+            textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 8F);
+        }
         textView.setTextColor(textColor);
         addView(textView, textParams);
 
-        LayoutParams moreParams = new  LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        LayoutParams moreParams = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         moreParams.rightMargin = dip2px(9f);
         moreParams.gravity = Gravity.CENTER_VERTICAL;
         ImageView moreImage = new ImageView(mContext);
@@ -93,5 +98,10 @@ public class LinLayoutView extends LinearLayout {
     public int dip2px(float dpValue) {
         float scale = getResources().getDisplayMetrics().density;
         return (int) (dpValue * scale + 0.5F);
+    }
+
+    public int sp2px(float spValue) {
+        final float fontScale = getResources().getDisplayMetrics().scaledDensity;
+        return (int) (spValue * fontScale + 0.5f);
     }
 }

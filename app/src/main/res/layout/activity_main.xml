@@ -83,6 +83,7 @@
     <com.lmy.library.view.LinLayoutView
         android:layout_width="100dp"
         app:linTextView="@string/app_name"
+        app:linTextSize="8sp"
         app:linBackground="@drawable/bg_m_button5"
         android:layout_height="50dp"
         app:linTextColor="@color/colorPrimary"
