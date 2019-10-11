@@ -46,8 +46,8 @@ public class LinLayoutView extends LinearLayout {
         mContext = context;
 
         TypedArray typedArray = mContext.obtainStyledAttributes(attrs, R.styleable.LinLayoutView);
-        iconWidth = typedArray.getInt(R.styleable.LinLayoutView_linIconWidth, dip2px(13));
-        iconHeight = typedArray.getInt(R.styleable.LinLayoutView_linIconHeight, dip2px(13));
+        iconWidth = typedArray.getLayoutDimension(R.styleable.LinLayoutView_linIconWidth, dip2px(13));
+        iconHeight = typedArray.getLayoutDimension(R.styleable.LinLayoutView_linIconHeight, dip2px(13));
         textViewSize = typedArray.getDimension(R.styleable.LinLayoutView_linTextSize, 0);
         iconSrc = typedArray.getResourceId(R.styleable.LinLayoutView_linIconScr, R.drawable.ic_m_sing_en);
         linBackground = typedArray.getResourceId(R.styleable.LinLayoutView_linBackground, R.drawable.bg_m_button5);
