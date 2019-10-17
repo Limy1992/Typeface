@@ -4,9 +4,9 @@ group='com.github.Limy1992'
 
 android {
     compileSdkVersion 29
-    defaultConfig {
-        minSdkVersion 19
-    }
+//    defaultConfig {
+//        minSdkVersion 19
+//    }
 
     buildTypes {
         release {
